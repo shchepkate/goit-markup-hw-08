@@ -13,5 +13,21 @@
 @mixin desktop {
     @media screen and (min-width: 1200px) {
       @content;
+    }}
+
+    @mixin pre-mobile {
+      @media screen and (max-width: 479px) {
+        @content;
+      }
     }
+
+@mixin pre-tablet {
+  @media screen and (max-width: 767px) {
+    @content;
   }
+}
+  
+@mixin pre-desktop {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }}
