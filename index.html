@@ -20,7 +20,7 @@
 
   <body>
     <!-- Header section -->
-    <!-- <header class="header">
+    <header class="header">
       <nav class="container header__container">
         <a href="/" lang="en" class="link logo header__logo"><span class="accent-text">Web</span>Studio</a>
         
@@ -46,13 +46,13 @@
         </ul>
         
         </nav>
-    </header> -->
+    </header>
 
 
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="hero__container">
+        <div class="container hero__container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button type="button" class="btn button hero__button" data-modal-open>Заказать услугу</button>
         </div>
@@ -122,23 +122,26 @@
       </section>
 
       <!-- Work section -->
-      <!-- <section class="work">
+      <section class="work">
         <div class="container work__container">
           <h2 class="section-title work__section-title">Чем мы занимаемся</h2>
           <ul class="list work__list">
 
             <li class="work__item">
-              <img class="work__image" 
-                src="./images/box1-structuring.jpg"
+              <img class="work__image"
+                srcset="./images/work/work-img1.jpg 1x, 
+                ./images/work/work-img1-2x.jpg 2x"
+                src="./images/work/work-img1.jpg"
                 alt="Создание структуры сайта"
                 width="370"
-              />
-            <p class="work__text">Десктопные приложения</p>
+                />
+              <p class="work__text">Десктопные приложения</p>
             </li>
 
             <li class="work__item">
               <img class="work__image"
-                src="./images/box2-mobileapp.jpg"
+                srcset="./images/work/work-img2.jpg 1x, ./images/work/work-img2-2x.jpg 2x"
+                src="./images/work/work-img2.jpg"
                 alt="Создание веб-приложений"
                 width="370"
               />
@@ -147,7 +150,8 @@
 
             <li class="work__item">
               <img class="work__image"
-                src="./images/box3-webdesign.jpg"
+                srcset="./images/work/work-img3.jpg 1x, ./images/work/work-img3-2x.jpg 2x"
+                src="./images/work/work-img3.jpg"
                 alt="Создание дизайна сайта"
                 width="370"
               />
@@ -155,21 +159,43 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Team section -->
-      <!-- <section class="team">
+      <section class="team">
         <div class="container">
         <h2 class="section-title team__section-title">Наша команда</h2>
 
         <ul class="list team__list">
           <li class="team__member">
-            <img
-              src="./images/img1-manwithglasses1.jpg"
-              alt="Мужчина в очках"
-              width="270"
-            />
-
+            <picture>
+              <source
+                srcset="
+                  ./images/team/team-img1-desktop.jpg 1x,
+                  ./images/team/team-img1-desktop-2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="
+                ./images/team/team-img1-tablet.jpg 1x,
+                ./images/team/team-img1-tablet-2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                ./images/team/team-img1-mobile.jpg 1x,
+                ./images/team/team-img1-mobile-2x.jpg 2x
+                "
+                media="(max-width: 767px)"
+              />
+              <img
+                src="./images/team/team-img-mobile.jpg"
+                alt="Мужчина в очках"
+              />
+            </picture>
+           
             <div class="team__member-text">
               <h3 class="team__name">Игорь Демьяненко</h3>
               <p lang="en" class="team__job-title">Product Designer</p>
@@ -212,11 +238,35 @@
           </li>
 
           <li class="team__member">
-            <img
-              src="./images/img2-womanblonde.jpg"
+            <picture>
+              <source
+                srcset="
+                  ./images/team/team-img2-desktop.jpg 1x,
+                  ./images/team/team-img2-desktop-2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="
+                ./images/team/team-img2-tablet.jpg 1x,
+                ./images/team/team-img2-tablet-2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                ./images/team/team-img2-mobile.jpg 1x,
+                ./images/team/team-img2-mobile-2x.jpg 2x
+                "
+                media="(max-width: 767px)"
+              />
+             <img
+              src=" ./images/team/team-img2-mobile.jpg"
               alt="Женщина в очках"
-              width="270"
-            />
+              />
+            </picture>
+
+
             <div class="team__member-text">
               <h3 class="team__name">Ольга Репина</h3>
               <p lang="en" class="team__job-title">Frontend Developer</p>
@@ -259,11 +309,35 @@
           </li>
 
           <li class="team__member">
-            <img
-              src="./images/img3-manblueshirt.jpg"
+            <picture>
+              <source
+                srcset="
+                  ./images/team/team-img3-desktop.jpg 1x,
+                  ./images/team/team-img3-desktop-2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="
+                ./images/team/team-img3-tablet.jpg 1x,
+                ./images/team/team-img3-tablet-2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                ./images/team/team-img3-mobile.jpg 1x,
+                ./images/team/team-img3-mobile-2x.jpg 2x
+                "
+                media="(max-width: 767px)"
+              />
+             <img
+              src=" ./images/team/team-img3-mobile.jpg"
               alt="Мужчина в голубой рубашке"
-              width="270"
-            />
+              />
+            </picture>
+            
+
             <div class="team__member-text">
               <h3 class="team__name">Николай Тарасов</h3>
             <p lang="en" class="team__job-title">Marketing</p>
@@ -306,11 +380,35 @@
           </li>
 
           <li class="team__member">
-            <img
-              src="./images/img4-manwithglasses2.jpg"
+            
+            <picture>
+              <source
+                srcset="
+                  ./images/team/team-img4-desktop.jpg 1x,
+                  ./images/team/team-img4-desktop-2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="
+                ./images/team/team-img4-tablet.jpg 1x,
+                ./images/team/team-img4-tablet-2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                ./images/team/team-img4-mobile.jpg 1x,
+                ./images/team/team-img4-mobile-2x.jpg 2x
+                "
+                media="(max-width: 767px)"
+              />
+             <img
+              src=" ./images/team/team-img4-mobile.jpg"
               alt="Мужчина в очках"
-              width="270"
-            />
+              />
+            </picture>
+           
             <div class="team__member-text">
               <h3 class="team__name">Михаил Ермаков</h3>
               <p lang="en" class="team__job-title">UI Designer</p>
@@ -353,10 +451,10 @@
           </li>
         </ul>
       </div>
-      </section> -->
+      </section>
 
     <!-- Clients section -->
-      <!-- <section class="clients">
+      <section class="clients">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="list clients__list">
@@ -412,7 +510,7 @@
             </li>
           </ul>
 
-        </div> -->
+        </div>
 
     </main>
 

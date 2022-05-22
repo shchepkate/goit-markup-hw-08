@@ -1,5 +1,10 @@
 .work {
+  display: none;
+  @include desktop {
+    display: block;
     padding-bottom: 94px;
+  }
+    
     }
     
 .work__section-title {
