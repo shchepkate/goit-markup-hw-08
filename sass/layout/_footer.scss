@@ -4,7 +4,10 @@
   
   .footer__container {
     display: flex;
-    
+    flex-direction: column;
+    @include tablet {flex-direction: row;
+    flex-wrap: wrap;}
+   
   }
   
 //   Footer logo
@@ -21,8 +24,17 @@
       padding-top: 60px;
       padding-bottom: 60px;
       display: block;
-      width: 301px;
+      text-align: center;
       margin: 0;
+      @include tablet {
+      width: 232px;
+      margin-left: 61px;
+      margin-right: 165px;};
+      @include desktop {
+      width: 231px;
+      margin-left: 0;
+      margin-right: 70px;
+      text-align: left;}
     }
   
    .footer__address-item:not(:last-child) {
@@ -58,10 +70,16 @@
   
   .footer__join {
     display: block;
-    padding-top: 72px;
-    width: 303px;
     margin: 0;
-  }
+    text-align: center;
+    @include tablet {
+      padding-top: 65px;
+      margin-right: 74px;};
+    @include desktop {
+      padding-top: 72px;
+      margin-right: 93px;};
+      }
+  
   
   .footer__small-title {
       margin-bottom: 20px;
@@ -90,39 +108,58 @@
 
 .footer__signup {
     display: block;
-    padding-top: 72px;
-    width: 570px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     margin: 0;
+    text-align: center;
+
+    @include tablet {
+      padding-top: 0;
+      width: 100%}
+    @include desktop {
+      padding-top: 72px;
+      width: 570px;
+      text-align: left;};
+     
   }
   
 .signup-block {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @include desktop {
     display: flex;
-    width: 100%;
-  
+    margin-left: 0;}
   }
   
 .signup-input {
-    width: 358px;
-    height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: transparent;
-    color:var(--white-color);
-    padding-left: 16px;
-    &::placeholder {
-        color:rgba(255, 255, 255, 0.6);
-        }
+  width: calc(100vw - 30px);
+    @include mobile {
+    width: 450px;};
+    @include desktop {
+    width: 358px;};
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color:var(--white-color);
+  padding-left: 16px;
+  &::placeholder {
+      color:rgba(255, 255, 255, 0.6);
+      }
+  margin-bottom: 20px;    
   }
   
 .signup-button {
-      margin-left: 10px;
-      }
+      margin-left: auto;
+      margin-right: auto;
+  }
   
         
 .footer__send-icon {
     fill: var(--white-color);
     display: inline-block;
     margin-left: 10px;
-    
   }

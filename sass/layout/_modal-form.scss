@@ -73,8 +73,10 @@
 
 .check-icon {
   display: inline-block;
-  margin-left: 12px;
+  margin-left: 0;
   margin-right: 8px;
+  @include desktop {
+  margin-left: 12px;};
   width: 16px;
   height: 15px;
   background-color: transparent;
@@ -96,8 +98,11 @@
 .form__agreement {
   display: block;
   font-weight: 400;
+  font-size: 11.9px;
+  line-height: 1.17;  
+  @include desktop {
   font-size: 14px;
-  line-height: 1.71;  
+  line-height: 1.71;}
   letter-spacing: 0.03em;
   margin-top: 20px;
   margin-bottom: 0;

@@ -940,6 +940,20 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .footer__logo {
@@ -952,8 +966,23 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   display: block;
-  width: 301px;
+  text-align: center;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__address {
+    width: 232px;
+    margin-left: 61px;
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__address {
+    width: 231px;
+    margin-left: 0;
+    margin-right: 70px;
+    text-align: left;
+  }
 }
 
 .footer__address-item:not(:last-child) {
@@ -984,9 +1013,20 @@ body {
 
 .footer__join {
   display: block;
-  padding-top: 72px;
-  width: 303px;
   margin: 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__join {
+    padding-top: 65px;
+    margin-right: 74px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__join {
+    padding-top: 72px;
+    margin-right: 93px;
+  }
 }
 
 .footer__small-title {
@@ -1013,20 +1053,42 @@ body {
 
 .footer__signup {
   display: block;
-  padding-top: 72px;
-  width: 570px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin: 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__signup {
+    padding-top: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__signup {
+    padding-top: 72px;
+    width: 570px;
+    text-align: left;
+  }
 }
 
 .signup-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .signup-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0;
+  }
 }
 
 .signup-input {
-  width: 358px;
+  width: calc(100vw - 30px);
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1035,6 +1097,17 @@ body {
   background-color: transparent;
   color: var(--white-color);
   padding-left: 16px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 480px) {
+  .signup-input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .signup-input {
+    width: 358px;
+  }
 }
 .signup-input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -1053,7 +1126,8 @@ body {
 }
 
 .signup-button {
-  margin-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer__send-icon {
@@ -1207,7 +1281,7 @@ body {
   top: 0;
   padding: 63px 24px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--white-color);
@@ -1218,6 +1292,11 @@ body {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .projects__cover-text {
+    font-size: 18px;
+  }
 }
 .projects__item:hover .projects__cover-text {
   -webkit-transform: translateY(0%);
@@ -1252,20 +1331,22 @@ body {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  padding: 93px 15px 94px 15px;
   -webkit-transition: opacity 1000ms, visibility 1000ms;
   transition: opacity 1000ms, visibility 1000ms;
+  overflow-y: scroll;
+}
+@media screen and (min-width: 480px) {
+  .backdrop {
+    padding: 93px auto 94px;
+  }
 }
 
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: scale(1) translate(-50%, -50%);
-          transform: scale(1) translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: calc(100% - 30px);
   background-color: #fff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1275,6 +1356,22 @@ body {
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1407,7 +1504,7 @@ body {
 
 .check-icon {
   display: inline-block;
-  margin-left: 12px;
+  margin-left: 0;
   margin-right: 8px;
   width: 16px;
   height: 15px;
@@ -1418,6 +1515,11 @@ body {
   -webkit-transition: fill 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 1200px) {
+  .check-icon {
+    margin-left: 12px;
+  }
+}
 .hidden-check:checked + .form__agreement .check-icon {
   border: none;
   background-color: var(--accent-color);
@@ -1427,11 +1529,17 @@ body {
 .form__agreement {
   display: block;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 11.9px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   margin-top: 20px;
   margin-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .form__agreement {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__agreement--text-accent {
